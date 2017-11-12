@@ -7,6 +7,7 @@ ENV TIMEZONE="America/Chicago"
 RUN apt-get update && apt-get install -y \
       wget \
       mono-complete \
+      mono-xsp4 \
       flite \
       unzip \
       nano \
