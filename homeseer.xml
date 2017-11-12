@@ -1,0 +1,67 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>HomeSeer</Name>
+  <Repository>sudo1/homeseer</Repository>
+  <Registry>https://hub.docker.com/r/sudo1/homeseer/</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Privileged>false</Privileged>
+  <Support>None Yet</Support>
+  <Overview>&#xD;
+    &#xD;
+</Overview>
+  <Category>HomeAutomation:</Category>
+  <WebUI>http://[IP]:[PORT:88]/</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/sudogreg/dockerfiles/master/HomeSeer.xml</TemplateURL>
+  <Icon>https://dl.dropboxusercontent.com/s/2haqrg3fw737ghe/HS-Button.png</Icon>
+  <ExtraParams/>
+  <PostArgs/>
+  <DateInstalled>1510507109</DateInstalled>
+  <Description>&#xD;
+    &#xD;
+</Description>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>88</HostPort>
+        <ContainerPort>88</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>10401</HostPort>
+        <ContainerPort>10401</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>10200</HostPort>
+        <ContainerPort>10200</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>10300</HostPort>
+        <ContainerPort>10300</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>34808</HostPort>
+        <ContainerPort>34808</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/cache/appdata/homeseer</HostDir>
+      <ContainerDir>/HomeSeer</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment/>
+  <Config Name="Host Port 1" Target="88" Default="88" Mode="tcp" Description="Container Port: 88" Type="Port" Display="always" Required="true" Mask="false">88</Config>
+  <Config Name="Host Port 2" Target="10401" Default="10401" Mode="tcp" Description="Container Port: 10401" Type="Port" Display="always" Required="true" Mask="false">10401</Config>
+  <Config Name="Host Port 3" Target="10200" Default="10200" Mode="tcp" Description="Container Port: 10200" Type="Port" Display="always" Required="true" Mask="false">10200</Config>
+  <Config Name="Host Port 4" Target="10300" Default="10300" Mode="tcp" Description="Container Port: 10300" Type="Port" Display="always" Required="true" Mask="false">10300</Config>
+  <Config Name="Host Port 5" Target="34808" Default="34808" Mode="tcp" Description="Container Port: 34808" Type="Port" Display="always" Required="true" Mask="false">34808</Config>
+  <Config Name="Host Path 1" Target="/HomeSeer" Default="/mnt/cache/appdata/homeseer" Mode="rw" Description="Container Path: /HomeSeer" Type="Path" Display="always" Required="true" Mask="false">/mnt/cache/appdata/homeseer</Config>
+</Container>
