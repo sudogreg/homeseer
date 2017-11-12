@@ -6,15 +6,10 @@ ENV TIMEZONE="America/Chicago"
 
 RUN apt-get update && apt-get install -y \
       wget \
-      mono-vbnc \
-      libmono-system-web4.0.cil \
-      libmono-system-design4.0.cil \
-      libmono-system-web-extensions4.0-cil \
-      libmono-system-runtime-caching4.0-cil \
+      mono-complete \
       flite \
       unzip \
       nano \
-      chromium \
       locales \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
@@ -37,5 +32,7 @@ RUN wget -O homeseer.tgz "http://homeseer.com/updates3/hs3_linux_${VERSION}.tar.
     && rm homeseer.tgz
 
 COPY ["run.sh", "/"]
+
+RUN cp /HomeSeer/Data/PLUGINS/HSPI_*.* /HomeSeer/
 
 ENTRYPOINT ["tini", "--", "/run.sh"]
