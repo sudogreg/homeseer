@@ -30,9 +30,8 @@ RUN wget -O tini.deb "https://github.com/krallin/tini/releases/download/v0.16.1/
 RUN wget -O homeseer.tgz "http://homeseer.com/updates3/hs3_linux_${VERSION}.tar.gz" \
     && tar -xzo -C / -f /homeseer.tgz \
     && rm homeseer.tgz
+    && cp /HomeSeer/Data/PLUGINS/HSPI_*.* /HomeSeer/
 
 COPY ["run.sh", "/"]
-
-RUN cp /HomeSeer/Data/PLUGINS/HSPI_*.* /HomeSeer/
 
 ENTRYPOINT ["tini", "--", "/run.sh"]
