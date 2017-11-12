@@ -6,16 +6,11 @@ ENV TIMEZONE="America/Chicago"
 
 RUN apt-get update && apt-get install -y \
       wget \
-      mono-devel \
       mono-vbnc \
-      mono-xsp4 \
       libmono-system-web4.0.cil \
       libmono-system-design4.0.cil \
       libmono-system-web-extensions4.0-cil \
       libmono-system-runtime-caching4.0-cil \
-      libmono-system-numerics4.0-cil \
-      libmono-system-xml-linq4.0-cil\
-      ca-certificates-mono \
       flite \
       chromium \
       locales \
