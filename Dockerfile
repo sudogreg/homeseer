@@ -10,6 +10,7 @@ RUN apt-get update && apt-get install -y \
       flite \
       unzip \
       nano \
+      chromium \
       locales \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
