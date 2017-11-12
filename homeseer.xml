@@ -12,7 +12,7 @@
 </Overview>
   <Category>HomeAutomation:</Category>
   <WebUI>http://[IP]:[PORT:88]/</WebUI>
-  <TemplateURL>https://raw.githubusercontent.com/sudogreg/dockerfiles/master/HomeSeer.xml</TemplateURL>
+  <TemplateURL>https://raw.githubusercontent.com/sudogreg/homeseer/master/homeseer.xml</TemplateURL>
   <Icon>https://dl.dropboxusercontent.com/s/2haqrg3fw737ghe/HS-Button.png</Icon>
   <ExtraParams/>
   <PostArgs/>
