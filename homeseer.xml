@@ -17,7 +17,7 @@ HomeSeer Technologies LLC is a technology company based in Bedford, New Hampshir
   <Repository>sudo1/homeseer</Repository>
   <Project>HomeSeer</Project>
   <BindTime>true</BindTime>
-  <Privileged>false</Privileged>
+  <Privileged>true</Privileged>
   <Networking>
     <Mode>host</Mode>
   </Networking>
@@ -25,25 +25,12 @@ HomeSeer Technologies LLC is a technology company based in Bedford, New Hampshir
   </Environment>
   <Data>
     <Volume>
-      <HostDir>/mnt/cache/appdata/homeseer/scripts</HostDir>
-      <ContainerDir>/HomeSeer/scripts</ContainerDir>
-      <Mode>rw</Mode>
-    </Volume>
-    <Volume>
-      <HostDir>/mnt/cache/appdata/homeseer/data</HostDir>
-      <ContainerDir>/HomeSeer/Data</ContainerDir>
-      <Mode>rw</Mode>
-    </Volume>
-    <Volume>
-      <HostDir>/mnt/cache/appdata/homeseer/config</HostDir>
-      <ContainerDir>/HomeSeer/Config</ContainerDir>
+      <HostDir>/mnt/cache/appdata/HomeSeer/</HostDir>
+      <ContainerDir>/HomeSeer</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
   </Data>
   <WebUI>http://[IP]:[PORT:88]/</WebUI>
   <Icon>https://dl.dropboxusercontent.com/s/2haqrg3fw737ghe/HS-Button.png</Icon>
-  <DonateText></DonateText>
-  <DonateLink></DonateLink>
-  <DonateImg></DonateImg>
   <ExtraParams></ExtraParams>
 </Container>
