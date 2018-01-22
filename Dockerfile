@@ -7,7 +7,7 @@ ENV TIMEZONE="America/Chicago"
 
 RUN apt-get update && apt-get install -y \
       wget \
-      mono-vbnc \
+      mono-complete \
       libmono-system-web4.0.cil \
       libmono-system-design4.0.cil \
       libmono-system-web-extensions4.0-cil \
