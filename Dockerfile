@@ -1,4 +1,4 @@
-FROM debian:latest
+FROM mono:latest
 ENV DEBIAN_FRONTEND noninteractive
 ENV VERSION="3_0_0_368"
 ENV TIMEZONE="America/Chicago"
