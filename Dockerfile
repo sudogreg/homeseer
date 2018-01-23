@@ -1,16 +1,15 @@
 FROM mono:latest
-
+RUN apt-get update \
+  && apt-get install -y binutils curl mono-complete ca-certificates-mono fsharp mono-vbnc nuget referenceassemblies-pcl \
+  && rm -rf /var/lib/apt/lists/* /tmp/*
+  
+FROM debian:latest
 ENV DEBIAN_FRONTEND noninteractive
 ENV VERSION="3_0_0_368"
 ENV TIMEZONE="America/Chicago"
 
 RUN apt-get update && apt-get install -y \
       wget \
-      mono-complete \
-      libmono-system-web4.0.cil \
-      libmono-system-design4.0.cil \
-      libmono-system-web-extensions4.0-cil \
-      libmono-system-runtime-caching4.0-cil \
       flite \
       chromium \
       locales \
