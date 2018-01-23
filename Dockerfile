@@ -3,14 +3,8 @@ ENV DEBIAN_FRONTEND noninteractive
 ENV VERSION="3_0_0_368"
 ENV TIMEZONE="America/Chicago"
 
-RUN apt-get update -q
-RUN apt-get -y -q install wget
-RUN wget http://download.mono-project.com/repo/xamarin.gpg
-RUN apt-key add xamarin.gpg
-RUN rm xamarin.gpg
-RUN echo "deb http://download.mono-project.com/repo/debian wheezy main" > /etc/apt/sources.list.d/mono-xamarin.list
-RUN apt-get update -q
-RUN apt-get install -y \
+RUN apt-get update && apt-get install -y \
+      wget \
       mono-complete \
       flite \
       chromium \
