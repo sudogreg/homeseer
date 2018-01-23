@@ -5,7 +5,6 @@ ENV TIMEZONE="America/Chicago"
 
 RUN apt-get update && apt-get install -y \
       wget \
-      mono-complete \
       flite \
       chromium \
       locales \
