@@ -29,5 +29,4 @@ RUN wget -O homeseer.tgz "http://homeseer.com/updates3/hs3_linux_${VERSION}.tar.
     && rm homeseer.tgz
 
 COPY ["run.sh", "/"]
-
 ENTRYPOINT ["tini", "--", "/run.sh"]
