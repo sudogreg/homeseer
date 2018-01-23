@@ -5,13 +5,12 @@ ENV TIMEZONE="America/Chicago"
 
 RUN apt-get update -q
 RUN apt-get -y -q install wget
-RUN wget http://download.mono-project.com/repo/debian/dists/stretch/Release.gpg
-RUN apt-key add Release.gpg
-RUN rm Release.gpg
-RUN echo "deb http://download.mono-project.com/repo/debian stretch main" | sudo tee /etc/apt/sources.list.d/mono-official.list
+RUN wget http://download.mono-project.com/repo/xamarin.gpg
+RUN apt-key add xamarin.gpg
+RUN rm xamarin.gpg
+RUN echo "deb http://download.mono-project.com/repo/debian wheezy main" > /etc/apt/sources.list.d/mono-xamarin.list
 RUN apt-get update -q
-
-RUN apt-get update && apt-get install -y \
+RUN apt-get install -y \
       mono-complete \
       flite \
       chromium \
